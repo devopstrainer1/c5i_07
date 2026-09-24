@@ -1,0 +1,25 @@
+Inspect the existing Hybrid RAG application and convert into Graph RAG system
+
+Use the existing architecture and code as baseline. Do not rewrite the application unnecessarily 
+
+Implement:
+Extract entities and relationship from the document
+Build a knowledge graph containing nodes, relationship and source metadata
+Store this graph using technology defined in the existing system, if none is specified, use a simple local graph implementation
+Replace the primary BM25/Vector retrieval with graph-based retrieval
+Support multiple hop queries by traversing entities and relationships
+Build context from retrieved graph and source chunks
+Generate final response using existing LLM
+Add test for entity extraction, relationship extraction, graph construction, single hop retrieval, multiple hop retrieval
+Do not invent relationship or any other thing new that not supported by the document
+Update README explaining Naive RAG -> Hybrid -> graph
+
+Add test specifically for:
+ - hallucinated answers
+ - insufficient context
+ - prompt injection in document
+ - unsupported relationship
+
+Before making changes, briefly inspect the current implementation  plan and show the proposed implementation plan explaining files/components that needs to change. Then implement and test the changes
+
+Do not modify document ingestion pipeline unless required for Graph search indexing.
