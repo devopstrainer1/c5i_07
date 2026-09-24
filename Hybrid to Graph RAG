@@ -1,3 +1,40 @@
+Use the proposed design architecture for RAG application. Inspect the existing repository, it only contains data files.  Using the proposed design as the source of truth, build complete RAG application from scratch:
+
+Requirements:
+
+- Create project structure and all required source files
+- Implement document loading/parsing, chunking, embeddings, vector database, retrieval, context construction, LLM generation and final q&A flow.
+- Keep ingestion and query pipeline separate
+- Use environment variables for API keys
+- Add source metadata to answer wherever available
+- Use only the provided document for response, do not infer anything on our own.
+- Add basic error handling, logging and tests
+- Create a simple UI using streamlit to query the RAG system
+- Create/update README with setup and run instructions
+
+
+############################
+Inspect the existing RAG application and convert the current native RAG into a Hybrid RAG system
+
+Use the existing architecture and code as baseline. Do not rewrite the application unnecessarily 
+
+Implement:
+
+- Semantic/vector search - use the existing embedding + vector database
+- Keyword/BM25 search for exact names, terms , keywords
+- Combine the results of both retrieval methods using an appropriate hybrid retrieval strategy
+- Remove duplicate chunks if any after combining results
+- Preserve existing metadata and source citations
+- Update test to validate vector, keyword and hybrid retrieval search
+- Update the README.md also  to explain difference between naive rag and hybrid rag
+
+Before making changes, briefly inspect the current implementation  plan and show the proposed implementation plan explaining files/components that needs to change. Then implement and test the changes
+
+Do not modify document ingestion pipeline unless required for BM25/hybrid search indexing.
+
+################################
+
+
 Inspect the existing Hybrid RAG application and convert into Graph RAG system
 
 Use the existing architecture and code as baseline. Do not rewrite the application unnecessarily 
