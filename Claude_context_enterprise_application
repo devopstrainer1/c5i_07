@@ -1,0 +1,103 @@
+You are a senior enterprise AI architect.
+
+We need to build a production-oriented enterprise AI application using Python, RAG, LLMs and tool/API integration.
+
+Business scenario:
+
+The enterprise has very large and heterogeneous data sources:
+
+PDFs and documents
+SharePoint/Confluence-style knowledge bases
+CSV/JSON files
+relational databases
+enterprise APIs
+Jira/incidents
+technical documentation
+
+There are also many REST APIs for real-time information such as customers, accounts, transactions, payments and operational data.
+
+The application must support natural-language queries and determine whether the query should use:
+
+Vector RAG
+Hybrid RAG
+Enterprise API/tool
+A combination of RAG + APIs
+
+Requirements:
+
+Design a production-grade architecture before writing implementation code.
+Create an architecture/design document explaining:
+system components
+data flow
+ingestion architecture
+retrieval architecture
+query routing
+API/tool routing
+context construction
+LLM generation
+security
+authorization
+observability
+evaluation
+scalability
+failure handling
+caching
+cost optimization
+Use hybrid retrieval:
+vector search
+keyword/BM25 search
+result fusion
+reranking
+metadata filtering
+Design ingestion for very large datasets:
+batch processing
+incremental ingestion
+deduplication
+document versioning
+metadata
+asynchronous processing
+embedding caching
+Do NOT put transactional or real-time API data into the vector database unnecessarily.
+Create a tool/API registry so that hundreds of enterprise APIs can be represented as controlled tools.
+Implement a query router that classifies requests as:
+KNOWLEDGE
+REAL_TIME_DATA
+TRANSACTIONAL/API
+HYBRID
+Implement role/tenant/access-control metadata filtering before retrieval.
+Never rely on the LLM alone for authorization.
+Include citations/source attribution for RAG responses.
+Add hallucination and groundedness checks.
+Add structured logging, tracing and latency/token/cost metrics.
+Add evaluation for:
+retrieval precision
+retrieval recall
+MRR/Recall@K
+answer faithfulness
+answer relevance
+citation correctness
+routing accuracy
+API/tool success rate
+Design the application so that components can be independently scaled.
+Use clean interfaces so vector DB, embedding model, LLM and reranker can be replaced without major application changes.
+Include unit tests, integration tests and representative evaluation datasets.
+
+Before implementing:
+
+Step 1:
+Inspect the repository and existing files.
+
+Step 2:
+Create an architecture/design document.
+
+Step 3:
+Create the proposed project structure.
+
+Step 4:
+Explain key design decisions and trade-offs.
+
+Step 5:
+Wait for approval before implementing the complete application.
+
+Do not prematurely write large amounts of implementation code.
+Prioritize enterprise architecture, modularity, security, scalability and testability.
